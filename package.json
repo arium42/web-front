@@ -1,0 +1,24 @@
+{
+  "name": "web-front",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arium42/web-front.git"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/arium42/web-front/issues"
+  },
+  "homepage": "https://github.com/arium42/web-front#readme",
+  "dependencies": {
+    "vue": "^3.0.5",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1"
+  }
+}
