@@ -5,6 +5,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+pnpm-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -72,6 +73,10 @@ typings/
 .env
 .env.test
 
+# local env files
+.env.local
+.env.*.local
+
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
@@ -102,3 +107,15 @@ dist
 
 # TernJS port file
 .tern-port
+
+# OS files
+.DS_Store
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
