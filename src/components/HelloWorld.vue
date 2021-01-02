@@ -1,35 +1,23 @@
 <template>
   <div class="hello">
-    <h1>Hello, {{ name }}</h1>
+    <h1>Hi, {{ name }}</h1>
   </div>
 </template>
 
 <script lang="ts">
-import { Me } from '../API_bindings';
+import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Me } from '../API_bindings'
 
-export default {
-  name: '-- please wait --',
+@Component
+export default class HelloWorld extends Vue {
+  @Prop() private name!: string;
 
-  data() {
-    console.log("11");
+  constructor (...a: any[]) {
+    super(...a)
 
-    return {
-      name: this.name,
-    };
-  },
-
-  mounted() {
-    console.log("12");
-
-    fetch('/api/me').then((x) => x.json()).then((me: Me) => {
-      this.name = me.name;
-    });
-  },
-};
+    fetch('/api/me').then(x => x.json()).then((me: Me) => {
+      this.name = me.name
+    })
+  }
+}
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="stylus">
-h1
-  margin-left 40px
-</style>
